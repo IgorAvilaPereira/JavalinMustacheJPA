@@ -5,7 +5,6 @@
 package apresentacao;
 
 import io.javalin.Javalin;
-import io.javalin.http.staticfiles.Location;
 import io.javalin.rendering.template.JavalinMustache;
 import static io.javalin.rendering.template.TemplateUtil.model;
 
@@ -20,7 +19,7 @@ public class MainJavalin {
             config.fileRenderer(new JavalinMustache());       
 //            config.staticFiles.add(staticFiles -> {
 //                staticFiles.hostedPath = "/";                   // change to host files on a subpath, like '/assets'
-//                staticFiles.directory = "/public";              // the directory where your files are located
+//                staticFiles.directory = "/static_files";              // the directory where your files are located;
 //                staticFiles.location = Location.CLASSPATH;      // Location.CLASSPATH (jar) or Location.EXTERNAL (file system)
 //                staticFiles.precompress = false;                // if the files should be pre-compressed and cached in memory (optimization)
 //                staticFiles.aliasCheck = null;                  // you can configure this to enable symlinks (= ContextHandler.ApproveAliases())
