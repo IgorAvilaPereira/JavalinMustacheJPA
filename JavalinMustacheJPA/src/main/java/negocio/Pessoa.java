@@ -27,6 +27,7 @@ public class Pessoa {
     private Endereco endereco;
 
     public Pessoa() {
+        this.endereco = new Endereco();
     }
     
     
