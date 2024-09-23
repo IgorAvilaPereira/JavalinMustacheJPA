@@ -7,6 +7,7 @@ package apresentacao;
 import io.javalin.Javalin;
 import io.javalin.rendering.template.JavalinMustache;
 import static io.javalin.rendering.template.TemplateUtil.model;
+import negocio.Pessoa;
 
 /**
  *
@@ -33,10 +34,9 @@ public class MainJavalin {
             ctx.render("/templates/index.html", model("action", "John"));
         });
 
-//        app.get("/output", ctx -> {
-//            // some code
-//            ctx.json("oi");
-//        });
+        app.get("/output", ctx -> {
+            ctx.json(new Pessoa());
+        });
 
        
     }
